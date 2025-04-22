@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AI Chat Interface</title>
-    <style>
-        #chat-container {
-            width: 500px;
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
-        #chat-messages {
-            height: 300px;
-            overflow-y: scroll;
-            border: 1px solid #eee;
-            margin-bottom: 10px;
-            padding: 10px;
-        }
-        #user-input {
-            width: 80%;
-            padding: 8px;
-        }
-        #send-btn {
-            padding: 8px 15px;
-        }
-    </style>
+    <title>API Call Example</title>
 </head>
 <body>
-    <div id="chat-container">
-        <div id="chat-messages"></div>
-        <input type="text" id="user-input" placeholder="Type your message...">
-        <button id="send-btn">Send</button>
-    </div>
-    
-    <script src="app.js"></script>
+    <h1>API Response</h1>
+    <div id="apiResponse"></div>
+
+    <script>
+        // Replace with your API endpoint
+        const apiUrl = 'https://api.deepseek.com/v1';
+        
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('apiResponse').innerHTML = 
+                    JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('apiResponse').innerHTML = 
+                    'Error fetching data';
+            });
+    </script>
 </body>
 </html>
