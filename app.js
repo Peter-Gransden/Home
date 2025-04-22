@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendBtn = document.getElementById('send-btn');
     
     // Replace with your actual API key
-    const API_KEY = 'sk-324d04af7d844e36b629959817348f4c';
+    const API_KEY = '';
     const API_URL = 'https://api.deepseek.com';
     
     sendBtn.addEventListener('click', async function() {
