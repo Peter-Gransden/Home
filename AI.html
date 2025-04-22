@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>API Call Example</title>
-</head>
-<body>
-    <h1>API Response</h1>
-    <div id="apiResponse"></div>
-
-    <script>
-        // Replace with your API endpoint
-        const apiUrl = 'https://api.deepseek.com/v1/chat/completions';
-        
-        fetch(apiUrl)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('apiResponse').innerHTML = 
-                    JSON.stringify(data, null, 2);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('apiResponse').innerHTML = 
-                    'Error fetching data';
-            });
-    </script>
-</body>
-</html>
+<script src="config.js"></script>
+<script>
+    // Now you can use API_KEY variable here
+</script>
